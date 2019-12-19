@@ -24,7 +24,8 @@ routes.post('/book', function(req, res){
 });
 
 routes.delete('/book/:id', function(req, res){
-  bookDao.removeBook(req.params.id, function(err, result){
+  var author_id = req.params.id;
+  bookDao.removeBook(author_id, function(err, result){
     if(err){
       res.status(400);
       res.send('Delete Book Failed!');

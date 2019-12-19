@@ -21,7 +21,7 @@ exports.addAuthor= function(author, cb){
       });
     });
 };
-exports.removeAuthor= function(author_Id, cb){
+exports.removeAuthor= function(author_id, cb){
   db.beginTransaction(function(err){
       if(err) cb(err, null);
   
